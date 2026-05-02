@@ -11,3 +11,10 @@ class AuthAuthenticated extends AuthState {
   final String token;
   AuthAuthenticated(this.token);
 }
+
+class Unauthenticated extends AuthState{}
+
+class AuthError extends AuthState {
+  final String message;
+  AuthError(this.message);
+}
