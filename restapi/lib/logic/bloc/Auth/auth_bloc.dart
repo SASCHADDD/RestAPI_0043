@@ -45,6 +45,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState>{
         developer.log('Status : AuthError - $e', name: 'AuthBloc');
       }
     });
-    
+
+    on<LogoutRequested>((event, emit) async {
+      await repository.deleteToken();
+      emit(Unauthenticated());
+      developer.log('Logout berhasil, token dihapus', name: 'AuthBloc');
+    });
   }
 }   
