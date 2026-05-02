@@ -22,7 +22,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState>{
       developer.log('Attempting login for: ${event.email}', name: 'AuthBloc');
       try{
         await repository.login(event.email, event.password);
+        final token = await repository.getToken();
+        if (token != null) {
+          emit(Authenticated(token));
+        } else {
+          throw Exception("Token tidak ditemukan setelah login");
+        }
+      } catch (e) {
+        emit(AuthError(e.toString()));
+        developer.log('Status : AuthError - $e', name: 'AuthBloc');
       }
     });
   }
-}
+}   
