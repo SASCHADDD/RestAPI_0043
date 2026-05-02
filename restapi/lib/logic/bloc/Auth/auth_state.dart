@@ -7,9 +7,9 @@ abstract class AuthState extends Equatable{
 
 class AuthInitial extends AuthState {}
 class AuthLoading extends AuthState {}
-class AuthAuthenticated extends AuthState {
+class Authenticated extends AuthState {
   final String token;
-  AuthAuthenticated(this.token);
+  Authenticated(this.token);
 }
 
 class Unauthenticated extends AuthState{}
