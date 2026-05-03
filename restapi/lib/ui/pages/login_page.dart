@@ -6,6 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:restapi/logic/bloc/Auth/auth_bloc.dart';
 import 'package:restapi/logic/bloc/Auth/auth_event.dart';
 import 'package:restapi/logic/bloc/Auth/auth_state.dart';
+import 'package:restapi/ui/pages/dashboard_page.dart';
 import 'package:restapi/ui/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
