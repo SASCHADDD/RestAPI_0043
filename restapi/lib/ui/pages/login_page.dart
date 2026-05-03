@@ -6,7 +6,6 @@ import 'package:lottie/lottie.dart';
 import 'package:restapi/logic/bloc/Auth/auth_bloc.dart';
 import 'package:restapi/logic/bloc/Auth/auth_event.dart';
 import 'package:restapi/logic/bloc/Auth/auth_state.dart';
-import 'package:restapi/ui/pages/dashboard_page.dart';
 import 'package:restapi/ui/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -155,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                                     ? Center(
                                         child: Lottie.asset(
                                           'assets/loading.json',
-                                          width : 100,
+                                          width: 100,
                                           height: 100,
                                         ),
                                       )
@@ -167,9 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                                                 .validate()) {
                                               context.read<AuthBloc>().add(
                                                 LoginRequested(
-                                                    _emailController.text,
-                                                   _passwordController.text,
-                                                 ),
+                                                  _emailController.text,
+                                                  _passwordController.text,
+                                                ),
                                               );
                                             }
                                           },
@@ -201,8 +200,7 @@ class _LoginPageState extends State<LoginPage> {
                                   children: [
                                     const Text(
                                       "Belum punya akun? ",
-                                      style:
-                                          TextStyle(color: Colors.white70),
+                                      style: TextStyle(color: Colors.white70),
                                     ),
                                     GestureDetector(
                                       onTap: () {
