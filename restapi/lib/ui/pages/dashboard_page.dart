@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -9,6 +10,8 @@ import 'package:restapi/logic/bloc/Auth/auth_event.dart';
 import 'package:restapi/logic/bloc/Hewan/hewan_bloc.dart';
 import 'package:restapi/logic/bloc/Hewan/hewan_event.dart';
 import 'package:restapi/logic/bloc/Hewan/hewan_state.dart';
+import 'package:restapi/ui/pages/edit_hewan_page.dart';
+import 'package:restapi/ui/pages/add_hewan_page.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
