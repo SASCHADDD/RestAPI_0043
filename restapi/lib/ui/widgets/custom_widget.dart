@@ -46,6 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
         ],
       ),
+      
       child: Focus(
         onFocusChange: (hasFocus) {
           setState(() {
